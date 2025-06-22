@@ -7,12 +7,3 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburger.classList.toggle('active');
   });
 });
-
-
-const isGitHubPages = window.location.hostname.includes('github.io');
-if (isGitHubPages) {
-  const repoName = window.location.pathname.split('/')[1]; // Extract repo name
-  document.querySelectorAll('a[href^="/"]').forEach(link => {
-    link.href = `/${repoName}${link.getAttribute('href')}`;
-  });
-}
